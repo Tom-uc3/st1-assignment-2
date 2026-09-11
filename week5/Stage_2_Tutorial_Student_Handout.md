@@ -57,7 +57,7 @@ Problem: It is difficult to keep data secure when it is either on paper or on a 
 
 Appointments should normally be easy to cancel.
 
-Problem: difficult to cancel appointments as its difficult to even now when and who an appointment is with.  Clarification question: which stakeholders do you want to be able to cancel appointments using the system?
+Problem: difficult to cancel appointments as it's difficult to even now when and who an appointment is with.  Clarification question: which stakeholders do you want to be able to cancel appointments using the system?
 
 # **Activity 4 \- AI Requirements Audit**
 

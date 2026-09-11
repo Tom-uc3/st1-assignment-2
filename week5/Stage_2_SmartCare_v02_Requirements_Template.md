@@ -2,7 +2,7 @@
 
 # **1\. Problem and Scope**
 
-The main issue is that smartcare uses paper and spreadsheets to keep track of all their data and it is difficult to find this way. So patients and the receptionists don’t know which practitioners are free and when. Management also can’t find the required information for operational reports.
+The main issue is that smartcare uses paper and spreadsheets to keep track of all their data, and it is difficult to find this way. So patients and the receptionists don’t know which practitioners are free and when. Management also can’t find the required information for operational reports.
 
 &nbsp;
 
@@ -43,9 +43,9 @@ FR-06: to be able to cancel bookings
 
 FR-07: view Booking times
 
-FR-08: error handling so theres no duplicate bookings
+FR-08: error handling so there is no duplicate bookings
 
-FR-09: error handling so theres no bookings missing information
+FR-09: error handling so there is no bookings missing information
 
 FR-10: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -71,7 +71,7 @@ NFR-06: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 US-01: As a Practitioner, I want patient information, so that I can prepare prior to seeing them.
 
-US-02: As a patient, I want to be able to see when my practitioner is available, so that i can find a suitable time to book an appointment.
+US-02: As a patient, I want to be able to see when my practitioner is available, so that I can find a suitable time to book an appointment.
 
 US-03: As a manager, I want to be able to see the appointment history, so that I can write operational reports.
 
