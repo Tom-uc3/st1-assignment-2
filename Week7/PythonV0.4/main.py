@@ -73,10 +73,11 @@ def main():
 
             print("\nCurrent Appointments")
             for appointment in AppointmentAI.Appointment.appointments:
-                print(appointment)
+                print(appointment,'\n')
         elif Menu == "2":
+            print("\n")
             Patient.Patient.view_Patient(Patient)
-            return
+            print("\n")
         elif Menu == "3":
             print("\nCurrent Appointments")
             for appointment in AppointmentAI.Appointment.appointments:
