@@ -1,0 +1,3 @@
+{'patient': 'Name: Cool | Contact Details: 3432 | Patient ID: 34', 'practitioner': 'Steve', 'PractitionerID': 36, 'time': '09:00'}
+{'patient': 'Name: Cool | Contact Details: 3432 | Patient ID: 34', 'practitioner': 'Dave', 'PractitionerID': 35, 'time': '10:00'}
+{'patient': 'Name: Cool | Contact Details: 3432 | Patient ID: 34', 'practitioner': 'Dave', 'PractitionerID': 35, 'time': '15:00'}

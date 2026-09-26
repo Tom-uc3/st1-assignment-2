@@ -31,10 +31,10 @@ def main():
             "2.Find patient\n"
             "3.View appointment\n"
             "4.New Patient\n"
-            "5.Exit\n"
-            "6.Cancel appointment\n")
+            "5.Cancel appointment\n"
+            "6.Exit\n")
 
-        Menu = input("Choose action")
+        Menu = input("Choose action:")
         if Menu == "1":
             global Practitioner
 
@@ -88,9 +88,11 @@ def main():
             AppointmentAI.Appointment.view_appointments()
         elif Menu == "4":\
             Patient.Patient.new_Patient(Patient)
-        elif Menu == "5":
+        elif Menu == "6":
             print("Exit")
             break
+        elif Menu == "5":
+            AppointmentAI.Appointment.cancel()
 
 
 

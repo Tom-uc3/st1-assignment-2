@@ -86,8 +86,57 @@ class Appointment:
         if not found:
             print("No appointments booked.")
 
-    def cancel(self):
-        Appointment.appointments.remove(self)
+    @classmethod
+    def cancel(cls):
+        import ast
+        try:
+            with open("appointments.txt", "r") as file:
+                lines = file.readlines()
+        except FileNotFoundError:
+            lines = []
+
+        # Keep track of which file lines are real appointments
+        booked = []
+        for line_number, line in enumerate(lines):
+            try:
+                data = ast.literal_eval(line)
+            except (ValueError, SyntaxError):
+                # Skip blank or old-format lines
+                continue
+            booked.append((line_number, data))
+
+        if not booked:
+            print("No appointments booked.")
+            return
+
+        print("\nBooked appointments:")
+        for i, (line_number, data) in enumerate(booked, start=1):
+            print(f"{i}. {data['patient']} with {data['practitioner']} "
+                  f"(ID: {data['PractitionerID']}) at {data['time']}")
+
+        while True:
+            try:
+                choice = int(input("Choose appointment to cancel use index number (0 to go back): "))
+                if choice == 0:
+                    return
+                if choice < 1:
+                    raise IndexError
+                line_number, data = booked[choice - 1]
+                break
+            except (ValueError, IndexError):
+                print("Not found")
+
+        del lines[line_number]
+        with open("appointments.txt", "w") as file:
+            file.writelines(lines)
+
+        # Also remove it from this session's list if it was booked this run
+        for appointment in cls.appointments:
+            if (appointment.practitioner.PractitionerID == data["PractitionerID"] and
+                    appointment.time == data["time"]):
+                cls.appointments.remove(appointment)
+                break
+
         print("Appointment cancelled.")
 
     def __str__(self):
