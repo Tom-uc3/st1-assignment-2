@@ -50,8 +50,14 @@ class Patient:
                         data = ast.literal_eval(line)
                 for d in data:
                     print(f"Name: {d['name']} | Contact Details: {d['ContactDetails']} | Patient ID: {d['PatientID']}")
+                    name = (f"Name: {d['name']} | Contact Details: {d['ContactDetails']} | Patient ID: {d['PatientID']}")
+
             except UnboundLocalError:
                 print("Not found")
+        try:
+            return name
+        except UnboundLocalError:
+            print("Not found")
 
-Patient.new_Patient(Patient)
-Patient.view_Patient(Patient)
+#Patient.new_Patient(Patient)
+#Patient.view_Patient(Patient)
