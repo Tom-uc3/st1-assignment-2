@@ -20,6 +20,7 @@ class Practitioner:
 
 
 Practitioner1 = Practitioner("Dave", "Colons", 35)
+Practitioner2 = Practitioner("Steve", "Alcohol abuse", 36)
 
 info = Practitioner1.view_Practitioner()
 
