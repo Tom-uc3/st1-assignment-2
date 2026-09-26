@@ -63,7 +63,7 @@ def main():
 
             from Patient import Patient
 
-            Patient.view_Patient(Patient)
+            #Patient.view_Patient(Patient)
 
             AppointmentAI.Appointment.book(
                 Patient.view_Patient(Patient),
