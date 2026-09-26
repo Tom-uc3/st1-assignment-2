@@ -42,22 +42,23 @@ class Patient:
     #To be able to search for a patient
     def view_Patient(self):
         import ast
-        search = input("Enter Patient Name or ID:")
-        with open("patient.txt", "r") as file:
-            try:
-                for line_number, line in enumerate(file, start=1):
-                     if search in line:
-                        data = ast.literal_eval(line)
-                for d in data:
-                    print(f"Name: {d['name']} | Contact Details: {d['ContactDetails']} | Patient ID: {d['PatientID']}")
-                    name = (f"Name: {d['name']} | Contact Details: {d['ContactDetails']} | Patient ID: {d['PatientID']}")
+        while True:
+            search = input("Enter Patient Name or ID:")
+            with open("patient.txt", "r") as file:
+                try:
+                    for line_number, line in enumerate(file, start=1):
+                        if search in line:
+                            data = ast.literal_eval(line)
+                    for d in data:
+                        print(f"Name: {d['name']} | Contact Details: {d['ContactDetails']} | Patient ID: {d['PatientID']}")
+                        name = (f"Name: {d['name']} | Contact Details: {d['ContactDetails']} | Patient ID: {d['PatientID']}")
 
+                except UnboundLocalError:
+                    print("Not found")
+            try:
+                return name
             except UnboundLocalError:
                 print("Not found")
-        try:
-            return name
-        except UnboundLocalError:
-            print("Not found")
 
 #Patient.new_Patient(Patient)
 #Patient.view_Patient(Patient)
