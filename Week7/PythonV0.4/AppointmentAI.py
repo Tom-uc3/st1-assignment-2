@@ -51,15 +51,6 @@ class Appointment:
     @classmethod
     def get_available_times(cls, practitioner,all_times):
         available = []
-        #search = str(time)
-        #file = open(f"appointments.txt", "r")
-       # for line_number, line in enumerate(file, start=1):
-          #  if search in line:
-          #      print("time not available.")
-
-            #else:
-             #   return available
-
         for time in all_times:
             if cls.is_available(practitioner, time):
                 available.append(time)
